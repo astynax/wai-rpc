@@ -15,3 +15,16 @@ $ stack exec wai-rpc
 Serving (hit Ctrl+C to stop)...
 ```
 
+## API
+
+```shell
+$ curl http://localhost:8000
+Available functions:
+reverse
+upper
+$ curl http://localhost:8000/upper
+returns string with each character in upper case
+$ curl http://localhost:8000/upper?hello%20world
+HELLO WORLD
+```
+
