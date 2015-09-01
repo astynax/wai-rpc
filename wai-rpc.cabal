@@ -10,4 +10,5 @@ executable wai-rpc
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5,
                        http-types, wai, warp,
-                       bytestring
+                       bytestring,
+                       containers
