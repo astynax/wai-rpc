@@ -1,19 +1,18 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
+import qualified Data.ByteString.Char8    as BS
 import           Data.ByteString.Lazy     (ByteString)
 import qualified Data.ByteString.Lazy     as LBS
-import qualified Data.ByteString.Char8    as BS
 import           Data.Char                (toUpper)
 import           Data.Map.Strict          (Map, fromList, keys, lookup)
 import           Network.HTTP.Types       (Status, badRequest400, hContentType,
                                            methodGet, notFound404, status200,
                                            statusCode)
-import           Network.Wai              (Application, Response, Middleware,
-                                           rawPathInfo, rawQueryString,
-                                           requestMethod, responseLBS,
+import           Network.Wai              (Application, Middleware, Response,
                                            queryString, rawPathInfo,
-                                           responseStatus)
+                                           rawQueryString, requestMethod,
+                                           responseLBS, responseStatus)
 import           Network.Wai.Handler.Warp (run)
 import           Prelude                  hiding (lookup)
 
